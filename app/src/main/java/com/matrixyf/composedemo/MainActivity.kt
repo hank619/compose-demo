@@ -55,6 +55,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.matrixyf.composedemo.ui.theme.ComposeDemoTheme
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
@@ -318,7 +319,7 @@ fun MySootheApp(windowSize: WindowSizeClass) {
 
 @Composable
 fun MySootheAppPortrait() {
-    MySootheTheme {
+    ComposeDemoTheme {
         Scaffold(
             bottomBar = { SootheBottomNavigation() }
         ) { padding ->
@@ -329,7 +330,7 @@ fun MySootheAppPortrait() {
 
 @Composable
 fun MySootheAppLandscape() {
-    MySootheTheme {
+    ComposeDemoTheme {
         Surface(color = MaterialTheme.colorScheme.background) {
             Row {
                 SootheNavigationRail()
@@ -365,13 +366,13 @@ private data class DrawableStringPair(
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun SearchBarPreview() {
-    MySootheTheme { SearchBar(Modifier.padding(8.dp)) }
+    ComposeDemoTheme { SearchBar(Modifier.padding(8.dp)) }
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun AlignYourBodyElementPreview() {
-    MySootheTheme {
+    ComposeDemoTheme {
         AlignYourBodyElement(
             text = R.string.ab1_inversions,
             drawable = R.drawable.ab1_inversions,
@@ -383,7 +384,7 @@ fun AlignYourBodyElementPreview() {
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun FavoriteCollectionCardPreview() {
-    MySootheTheme {
+    ComposeDemoTheme {
         FavoriteCollectionCard(
             text = R.string.fc2_nature_meditations,
             drawable = R.drawable.fc2_nature_meditations,
@@ -395,19 +396,19 @@ fun FavoriteCollectionCardPreview() {
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun FavoriteCollectionsGridPreview() {
-    MySootheTheme { FavoriteCollectionsGrid() }
+    ComposeDemoTheme { FavoriteCollectionsGrid() }
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun AlignYourBodyRowPreview() {
-    MySootheTheme { AlignYourBodyRow() }
+    ComposeDemoTheme { AlignYourBodyRow() }
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun HomeSectionPreview() {
-    MySootheTheme {
+    ComposeDemoTheme {
         HomeSection(R.string.align_your_body) {
             AlignYourBodyRow()
         }
@@ -417,19 +418,19 @@ fun HomeSectionPreview() {
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE, heightDp = 180)
 @Composable
 fun ScreenContentPreview() {
-    MySootheTheme { HomeScreen() }
+    ComposeDemoTheme { HomeScreen() }
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun BottomNavigationPreview() {
-    MySootheTheme { SootheBottomNavigation(Modifier.padding(top = 24.dp)) }
+    ComposeDemoTheme { SootheBottomNavigation(Modifier.padding(top = 24.dp)) }
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
 @Composable
 fun NavigationRailPreview() {
-    MySootheTheme { SootheNavigationRail() }
+    ComposeDemoTheme { SootheNavigationRail() }
 }
 
 @Preview(widthDp = 360, heightDp = 640)
